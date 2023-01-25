@@ -52,13 +52,6 @@ public class order_details_screen extends AppCompatActivity {
         sendingDate.setText(sent);
         arrivalDate.setText(arrived);
         orderReciveDate.setText(recived);
-        if (status.equals("open")) {
-            statusTV.setText("open");
-        }
-        else
-        {
-            statusTV.setText("close");
-        }
-
+        statusTV.setText(status);
     }
 }
