@@ -9,7 +9,7 @@ public class Order {
     private String destination_country;
     private String arrival_date;
     private String client_pickup_date;
-    private boolean status; // order is open => true, order is closed => false
+    private String status;
 
     public Order(int serial_number, String product, String order_date,
                  String origin_country, String destination_country)
@@ -22,7 +22,7 @@ public class Order {
         this.delivery_sent_date = order_date; // need to be modified
         this.arrival_date = order_date; // need to be modified
         this.client_pickup_date = order_date; // need to be modified
-        this.status = true;
+        this.status = "open";
     }
 
     // getters
@@ -58,12 +58,12 @@ public class Order {
         return client_pickup_date;
     }
 
-    public boolean getOrderStatus() {
+    public String getOrderStatus() {
         return status;
     }
 
     // setters
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }
