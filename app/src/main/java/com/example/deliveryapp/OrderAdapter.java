@@ -31,6 +31,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
                     Intent intent = new Intent(view.getContext(), OrderScreen.class);
                     intent.putExtra("name",current.getProduct());
                     intent.putExtra("number",current.getSerial_number());
+                    intent.putExtra("date", current.getOrder_date());
+                    intent.putExtra("origin", current.getOrigin_country());
+                    intent.putExtra("destination", current.getDestination_country());
+                    intent.putExtra("sent", current.getDelivery_sent_date());
+                    intent.putExtra("arrival", current.getArrival_date());
+                    intent.putExtra("recived", current.getClient_pickup_date());
+                    intent.putExtra("status",current.getOrderStatus());
 
                     view.getContext().startActivity(intent);
                 }
