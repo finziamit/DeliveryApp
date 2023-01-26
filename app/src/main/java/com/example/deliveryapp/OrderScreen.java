@@ -19,6 +19,8 @@ public class OrderScreen extends AppCompatActivity {
         setContentView(R.layout.activity_order_screen);
 
         Button orderDetails = (Button) findViewById(R.id.OrderDetails);
+        Button shipmentDetails = (Button) findViewById(R.id.ShipmentDetails);
+        Button editOrder = (Button) findViewById(R.id.EditOrder);
 
         String name = getIntent().getStringExtra("name");
         int number = getIntent().getIntExtra("number", 0);
@@ -54,6 +56,39 @@ public class OrderScreen extends AppCompatActivity {
                 intent.putExtra("arrival", arrived);
                 intent.putExtra("recived", recived);
                 intent.putExtra("status",status);
+
+                startActivity(intent);
+            }
+        });
+
+        shipmentDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LinearLayout containerView = findViewById(R.id.list_ordered_item);
+
+
+                Intent intent = new Intent(view.getContext(), ShipmentDetails.class);
+
+                intent.putExtra("number",number);
+                intent.putExtra("date", date);
+
+                startActivity(intent);
+            }
+        });
+
+        editOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LinearLayout containerView = findViewById(R.id.list_ordered_item);
+
+
+                Intent intent = new Intent(view.getContext(), EditOrder.class);
+
+                intent.putExtra("name",name);
+                intent.putExtra("date", date);
+                intent.putExtra("origin", origin);
+                intent.putExtra("destination", destination);
+
 
                 startActivity(intent);
             }
