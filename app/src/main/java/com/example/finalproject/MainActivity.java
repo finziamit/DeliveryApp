@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 orderedProductArr, orderDateArr, originArr, destArr, statusArr);
 
         searchView = findViewById(R.id.searchView);
-        searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -93,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
         else{
             while(cursor.moveToNext()){
                 orderSerialArr.add(cursor.getString(0));
-                orderedProductArr.add(cursor.getString(2));
-                orderDateArr.add(cursor.getString(3));
-                originArr.add(cursor.getString(4));
-                destArr.add(cursor.getString(5));
-                sendArr.add(cursor.getString(6));
-                arrivalArr.add(cursor.getString(7));
-                reciveArr.add(cursor.getString(8));
-                statusArr.add(cursor.getString(9));
+                orderedProductArr.add(cursor.getString(1));
+                orderDateArr.add(cursor.getString(2));
+                originArr.add(cursor.getString(3));
+                destArr.add(cursor.getString(4));
+                sendArr.add(cursor.getString(5));
+                arrivalArr.add(cursor.getString(6));
+                reciveArr.add(cursor.getString(7));
+                statusArr.add(cursor.getString(8));
             }
         }
 
