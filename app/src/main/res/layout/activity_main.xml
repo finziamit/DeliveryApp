@@ -7,45 +7,38 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recycler_view"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/Delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="Delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AddOrder"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <Button
-        android:id="@+id/AddOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:text="Add Order"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="540dp"
+        android:focusable="true"
+        android:paddingTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="16dp"
+        android:queryHint="Search Here..."
+        android:queryBackground="@color/cardview_light_background"
+        app:layout_constraintBottom_toTopOf="@+id/addOrderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addOrderButton"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="32dp"
+        android:text="Add Order"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.235"
-        tools:layout_editor_absoluteX="-16dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

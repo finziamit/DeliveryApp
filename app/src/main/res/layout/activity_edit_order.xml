@@ -1,81 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/detailed_ordered_item"
-    android:padding="10dp">
+    tools:context=".EditOrder">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/ProductName2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Product"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/EditProduct"
-            android:hint="Product name"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/OrderDate2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProductName2"
+        tools:ignore="TouchTargetSizeCheck" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/orderDate"
-            android:hint="orderDate"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/OriginCountry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Origin Country"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OrderDate2"
+        tools:ignore="TouchTargetSizeCheck" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/originCountry"
-            android:hint="Origin country"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/DestinationCountry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Destination Country"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OriginCountry2"
+        tools:ignore="TouchTargetSizeCheck" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/destinationCountry"
-            android:hint="Destination country"/>
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <Button
+        android:id="@+id/EditBtn"
         android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="64dp"
+        android:text="Edit Order"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DestinationCountry2" />
+    <Button
+        android:id="@+id/DeleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:text="Delete Order"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditBtn" />
+
+    <Button
+        android:id="@+id/shipmentDetailsBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Shipment Details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeleteBtn"
+        app:layout_constraintVertical_bias="0.079" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/Submit"
-            android:onClick="SubmitEditedProduct"
-            android:text="Submit" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</LinearLayout>
+    <Button
+        android:id="@+id/orderDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="Order Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shipmentDetailsBtn"
+        app:layout_constraintTop_toTopOf="@+id/shipmentDetailsBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
