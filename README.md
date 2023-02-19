@@ -15,7 +15,7 @@ The app created as my final course project.
 * ##### Add Order screen - A screen with EditText fields where you can place a new order using your desired details.
 
 ## Side Notes:
-Since the app isn't linked to any orders company or shipment company some of the data that needs to be update by the supplier's side is hard coded.
+Since the app isn't linked to any third side such as shipment company or a supplier, some of the data that needs to be update by the supplier's side is hard coded.
 You can find some DB manipulations that can help implement supplier's side data in the future (such as open order and close order).
 
 feel free to follow!
