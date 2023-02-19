@@ -97,7 +97,7 @@
     <Button
         android:id="@+id/shipmentDetailsBtn"
         android:text="Shipment Details"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
@@ -111,7 +111,7 @@
     <Button
         android:id="@+id/orderDetailsBtn"
         android:text="Order Details"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
