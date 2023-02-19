@@ -82,13 +82,13 @@
         app:layout_constraintTop_toBottomOf="@+id/DestinationCountry2" />
     <Button
         android:id="@+id/DeleteBtn"
+        android:text="Delete Order"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
-        android:text="Delete Order"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,24 +96,29 @@
 
     <Button
         android:id="@+id/shipmentDetailsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
         android:text="Shipment Details"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DeleteBtn"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintTop_toBottomOf="@+id/DeleteBtn"/>
 
     <Button
         android:id="@+id/orderDetailsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:text="Order Details"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/shipmentDetailsBtn"
-        app:layout_constraintTop_toTopOf="@+id/shipmentDetailsBtn" />
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shipmentDetailsBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
