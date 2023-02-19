@@ -7,57 +7,36 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_recycler_view"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/Delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="Delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AddOrder"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <Button
-        android:id="@+id/AddOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="Add Order"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <Button
-        android:id="@+id/Edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="32dp"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toEndOf="@+id/Delete"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view"
-        app:layout_constraintVertical_bias="0.235"
-        tools:layout_editor_absoluteX="-16dp" />
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/actionBarSize"
+        android:queryBackground="@color/cardview_light_background"
+        android:queryHint="Search Here..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/addOrderButton"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Add Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

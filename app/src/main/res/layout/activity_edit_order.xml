@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddOrder">
+    tools:context=".EditOrder">
 
     <EditText
-        android:id="@+id/ProductName"
+        android:id="@+id/ProductName2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="Product"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/OrderDate"
+        android:id="@+id/OrderDate2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -34,11 +34,11 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ProductName"
+        app:layout_constraintTop_toBottomOf="@+id/ProductName2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/OriginCountry"
+        android:id="@+id/OriginCountry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -49,11 +49,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OrderDate"
+        app:layout_constraintTop_toBottomOf="@+id/OrderDate2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/DestinationCountry"
+        android:id="@+id/DestinationCountry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -64,20 +64,56 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OriginCountry"
+        app:layout_constraintTop_toBottomOf="@+id/OriginCountry2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/EditBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="64dp"
-        android:text="Add Order"
+        android:text="Edit Order"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DestinationCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/DestinationCountry2" />
+    <Button
+        android:id="@+id/DeleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:text="Delete Order"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditBtn" />
+
+    <Button
+        android:id="@+id/shipmentDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Shipment Details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeleteBtn"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/orderDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="Order Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shipmentDetailsBtn"
+        app:layout_constraintTop_toTopOf="@+id/shipmentDetailsBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
