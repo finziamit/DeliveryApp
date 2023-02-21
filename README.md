@@ -19,3 +19,6 @@ Since the app isn't linked to any third side such as shipment company or a suppl
 You can find some DB manipulations that can help implement supplier's side data in the future (such as open order and close order).
 
 feel free to follow!
+
+## App's demo with Hebrew commentary:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/https://www.youtube.com/watch?v=DHHcfVgKcsk/0.jpg)](https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=DHHcfVgKcsk)
