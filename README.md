@@ -21,4 +21,4 @@ You can find some DB manipulations that can help implement supplier's side data 
 feel free to follow!
 
 ## App's demo with Hebrew commentary:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/https://www.youtube.com/watch?v=DHHcfVgKcsk/0.jpg)](https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=DHHcfVgKcsk)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/https://www.youtube.com/watch?v=DHHcfVgKcsk/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/watch?v=DHHcfVgKcsk "Delivery App Demo")
